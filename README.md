@@ -41,6 +41,7 @@ export const { F, Icons, useFonts } = createFontsToLoad({
     ...Roboto,
     Inter_900Black
   },
+  // If we don't previously load the icons, they may take a while to show up!
   iconsToLoad: {
     MaterialCommunityIcons,
     Entypo,
@@ -79,7 +80,10 @@ const styles = StyleSheet.create({
   }
 });
 
-const component = <Icons.MaterialCommunityIcons ... />
+function Component() {
+  return (<Icons.MaterialCommunityIcons ... />)
+}
+
 ```
 
 ## 📰 [Changelog](CHANGELOG.md)
