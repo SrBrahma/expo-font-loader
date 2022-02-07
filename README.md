@@ -5,7 +5,7 @@
 [![npm](https://img.shields.io/npm/v/expo-font-loader)](https://www.npmjs.com/package/expo-font-loader)
 [![TypeScript](https://badgen.net/npm/types/env-var)](http://www.typescriptlang.org/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
-[![npm](https://img.shields.io/npm/dm/expo-font-loader)](https://www.npmjs.com/package/expo-font-loader)
+<!-- [![npm](https://img.shields.io/npm/dm/expo-font-loader)](https://www.npmjs.com/package/expo-font-loader) -->
 </div>
 
 # expo-font-loader
