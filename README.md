@@ -14,6 +14,11 @@ Almost 2 years ago [I've shared a little hack for expo-font](https://github.com/
 
 It's about smartly loading and using fonts with [@expo-google-fonts](https://github.com/expo/google-fonts) and icons with [@expo/vector-icons](https://github.com/expo/vector-icons) - icons are actually fonts!
 
+Without this, you have to manually type the fontFamily in a Text style, e.g. fontFamily: 'Roboto_500Medium'. This is bad because you may not know or forget exactly what is its name, you may make a typo, you may have forgot to load it, you have to fully type it...
+
+With this package, you speficify the fonts to be loaded, and it's returned a `Fonts` (or `F`, alias) object to be used in the fontFamily. As it's type smart, when you have `fontFamily: F.`, the IntelliSense will show all the available fontsFamilies you can use, and you can safely and quickly pick the one you want. It will complete with for example `F.Roboto_500Medium`. It's very useful when dealing with various fontsFamilies, so you can see all the options and quickly pick the one that best fits the text.
+
+If you remove a font to be loaded and it's being used somewhere, there will be a Type error, as it knows that font isn't available to be used.
 
 ## 💿 Installation
 ```bash
