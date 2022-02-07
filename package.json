@@ -2,7 +2,7 @@
   "name": "expo-font-loader",
   "version": "0.1.0",
   "description": "Smartly load and use expo fonts and icons!",
-  "main": "./lib/main/index.js",
+  "main": "./lib/index.js",
   "scripts": {
     "test": "echo \"No test specified.\"",
     "lint": "eslint --fix \"src/**\"",
