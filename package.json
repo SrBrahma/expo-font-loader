@@ -1,6 +1,6 @@
 {
   "name": "expo-font-loader",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Smartly load and use expo fonts and icons!",
   "main": "./lib/index.js",
   "scripts": {
