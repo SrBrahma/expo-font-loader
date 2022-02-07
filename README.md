@@ -33,6 +33,7 @@ import { Entypo, MaterialCommunityIcons } from '@expo/vector-icons';
 import * as Roboto from '@expo-google-fonts/roboto';
 // You can load single fonts instead of the whole family
 import { Inter_900Black } from '@expo-google-fonts/inter';
+import { createFontsToLoad } from 'expo-font-loader'
 
 // F is an alias to Fonts, as I is an alias to Icons.
 export const { F, Icons, useFonts } = createFontsToLoad({
