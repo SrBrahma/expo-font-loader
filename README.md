@@ -15,14 +15,14 @@ Almost 2 years ago [I've shared a little hack for expo-font](https://github.com/
 It's about smartly loading and using fonts with [@expo-google-fonts](https://github.com/expo/google-fonts) and icons with [@expo/vector-icons](https://github.com/expo/vector-icons).
 
 
-## Installation
+## 💿 Installation
 ```bash
 npm install expo-font-loader
 # or
 yarn add expo-font-loader
 ```
 
-## Usage
+## 📖 Usage
 
 #### Fonts setup
 ```tsx
@@ -81,4 +81,4 @@ const styles = StyleSheet.create({
 const component = <Icons.MaterialCommunityIcons ... />
 ```
 
-## [Changelog](CHANGELOG.md)
+## 📰 [Changelog](CHANGELOG.md)
