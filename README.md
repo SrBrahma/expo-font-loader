@@ -12,7 +12,7 @@
 
 Almost 2 years ago [I've shared a little hack for expo-font](https://github.com/expo/google-fonts/issues/6). Now, it's improved and it's a npm package!
 
-It's about smartly loading and using fonts with [@expo-google-fonts](https://github.com/expo/google-fonts) and icons with [@expo/vector-icons](https://github.com/expo/vector-icons).
+It's about smartly loading and using fonts with [@expo-google-fonts](https://github.com/expo/google-fonts) and icons with [@expo/vector-icons](https://github.com/expo/vector-icons) - icons are actually fonts!
 
 
 ## 💿 Installation
