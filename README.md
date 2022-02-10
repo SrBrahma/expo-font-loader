@@ -29,7 +29,7 @@ yarn add expo-font-loader
 
 ## 📖 Usage
 
-#### Fonts setup
+#### Setup
 ```tsx
 import { Platform } from 'react-native';
 // Your icons to be loaded on start
