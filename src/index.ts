@@ -81,7 +81,7 @@ type FontsToLoadProps<F extends FontsToLoad, I extends Icons, A extends SystemAl
   aliases?: A;
 };
 
-type FontsToLoadRtn<F extends FontsToLoad, I extends Icons, A extends SystemAliases> = {
+type FontsToLoadRtn<F extends FontsToLoad, I extends Icons, A extends SystemAliases> = Id<{
   /** Short alias to `Fonts`.
    *
    * To be used in a style like `{fontFamily: F.Roboto_500Medium }` */
@@ -93,13 +93,13 @@ type FontsToLoadRtn<F extends FontsToLoad, I extends Icons, A extends SystemAlia
    /** Short alias to `Icons`.
     *
     * Icons to be used via `<Icons.MaterialCommunityIcons/>`. */
-   I: I;
+   I: Id<I>; // Id here else it wouldn't remove the Record<never, never>.
    /** Icons to be used via `<Icons.MaterialCommunityIcons/>`. */
-   Icons: I;
-};
+   Icons: Id<I>;
+}>;
 
 /** Instead of using the useFonts(fontsArg) hook to get the loaded state, use useMyFonts() on your App start. */
-export function createFontsToLoad<F extends FontsToLoad, I extends Icons, A extends SystemAliases>({
+export function createFontsToLoad<F extends FontsToLoad = Record<never, never>, I extends Icons = Record<never, never>, A extends SystemAliases= Record<never, never>>({
   fontsToLoad = {} as F,
   iconsToLoad = {} as I,
   aliases = {} as A,
@@ -134,3 +134,9 @@ export function createFontsToLoad<F extends FontsToLoad, I extends Icons, A exte
     Icons: iconsToLoad,
   };
 }
+
+// Test Probe
+// const a = createFontsToLoad({
+//   aliases: {a: '4'}
+// })
+// a.

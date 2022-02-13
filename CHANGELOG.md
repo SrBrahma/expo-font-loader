@@ -12,6 +12,9 @@
 -->
 
 
+## 0.1.4 - 2022-02-12
+* Fixed return type when not entering a prop.
+
 ## 0.1.3 - 2022-02-12
 * All props are now optional
 
