@@ -47,7 +47,7 @@ type FontsToLoadProps<F extends FontsToLoad, I extends Icons, A extends SystemAl
    * })
    * ```
    * */
-  fontsToLoad: F;
+  fontsToLoad?: F;
   /** Your icons to be loaded/cached on useFonts.
    *
    * @example
@@ -62,7 +62,7 @@ type FontsToLoadProps<F extends FontsToLoad, I extends Icons, A extends SystemAl
    * })
    * ```
   */
-  iconsToLoad: I;
+  iconsToLoad?: I;
   /** Manual system fonts aliases to be added to Fonts.
    *
    * System fonts don't need to be loaded, this only adds the alias to Fonts.
@@ -78,7 +78,7 @@ type FontsToLoadProps<F extends FontsToLoad, I extends Icons, A extends SystemAl
    *
    *
   */
-  aliases: A;
+  aliases?: A;
 };
 
 type FontsToLoadRtn<F extends FontsToLoad, I extends Icons, A extends SystemAliases> = {
@@ -100,9 +100,9 @@ type FontsToLoadRtn<F extends FontsToLoad, I extends Icons, A extends SystemAlia
 
 /** Instead of using the useFonts(fontsArg) hook to get the loaded state, use useMyFonts() on your App start. */
 export function createFontsToLoad<F extends FontsToLoad, I extends Icons, A extends SystemAliases>({
-  fontsToLoad,
-  iconsToLoad,
-  aliases,
+  fontsToLoad = {} as F,
+  iconsToLoad = {} as I,
+  aliases = {} as A,
 }: FontsToLoadProps<F, I, A>): FontsToLoadRtn<F, I, A> {
 
   const fontsToLoadInternal = { ...fontsToLoad } as Id<Omit<typeof fontsToLoad, '__metadata__' | 'useFonts'>>;

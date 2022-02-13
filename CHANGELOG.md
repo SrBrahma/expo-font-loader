@@ -12,6 +12,9 @@
 -->
 
 
+## 0.1.3 - 2022-02-12
+* All props are now optional
+
 ## 0.1.2 - 2022-02-12
 * Added 'monospace' as a default alias
 
