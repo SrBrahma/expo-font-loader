@@ -12,6 +12,9 @@
 -->
 
 
+## 0.1.2 - 2022-02-12
+* Added 'monospace' as a default alias
+
 ## 0.1.1 - 2022-02-06
 * Fixed missing .d.ts files
 

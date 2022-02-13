@@ -47,7 +47,7 @@ export const { F, Icons, useFonts } = createFontsToLoad({
     Entypo,
   },
   aliases: {
-    monospace: Platform.OS === 'ios' ? 'Courier' : 'monospace',
+    monospace: Platform.OS === 'ios' ? 'Courier' : 'monospace', // 'monospace' is automatically added by default!
   },
 });
 ```

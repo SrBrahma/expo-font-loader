@@ -1,8 +1,8 @@
 // https://docs.expo.dev/guides/using-custom-fonts/
 // I first shared it in here: https://github.com/expo/google-fonts/issues/6
 // Aditional fontWeights and to be used on iOS
+import { Platform } from 'react-native';
 import { useFonts as expoUseFonts } from 'expo-font';
-
 
 
 /** Prettify obj type */
@@ -121,6 +121,7 @@ export function createFontsToLoad<F extends FontsToLoad, I extends Icons, A exte
   const Fonts = {
     ...Object.fromEntries(Object.keys(fontsToLoadInternal).map((key) => [key, key])),
     ...aliases,
+    monospace: Platform.OS === 'ios' ? 'Courier' : 'monospace',
   } as Fonts<F, A>;
 
   const useFonts = () => expoUseFonts(useFontsArg);
