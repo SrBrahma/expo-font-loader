@@ -11,6 +11,9 @@
 *
 -->
 
+## 0.1.5 - 2022-02-13
+* Fixed default aliases not showing up on `F`
+* `aliases` now has priority over default aliases.
 
 ## 0.1.4 - 2022-02-12
 * Fixed return type when not entering a prop.

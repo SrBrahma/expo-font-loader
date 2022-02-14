@@ -98,12 +98,19 @@ type FontsToLoadRtn<F extends FontsToLoad, I extends Icons, A extends SystemAlia
    Icons: Id<I>;
 }>;
 
+const defaultAliases = {
+  monospace: Platform.OS === 'ios' ? 'Courier' : 'monospace',
+};
+type DefaultAliases = typeof defaultAliases;
+
 /** Instead of using the useFonts(fontsArg) hook to get the loaded state, use useMyFonts() on your App start. */
-export function createFontsToLoad<F extends FontsToLoad = Record<never, never>, I extends Icons = Record<never, never>, A extends SystemAliases= Record<never, never>>({
+export function createFontsToLoad<
+  F extends FontsToLoad = Record<never, never>, I extends Icons = Record<never, never>, A extends SystemAliases = Record<never, never>,
+>({
   fontsToLoad = {} as F,
   iconsToLoad = {} as I,
   aliases = {} as A,
-}: FontsToLoadProps<F, I, A>): FontsToLoadRtn<F, I, A> {
+}: FontsToLoadProps<F, I, A>): FontsToLoadRtn<F, I, DefaultAliases & A> {
 
   const fontsToLoadInternal = { ...fontsToLoad } as Id<Omit<typeof fontsToLoad, '__metadata__' | 'useFonts'>>;
   // Remove non-font stuff
@@ -120,9 +127,9 @@ export function createFontsToLoad<F extends FontsToLoad = Record<never, never>, 
 
   const Fonts = {
     ...Object.fromEntries(Object.keys(fontsToLoadInternal).map((key) => [key, key])),
+    ...defaultAliases,
     ...aliases,
-    monospace: Platform.OS === 'ios' ? 'Courier' : 'monospace',
-  } as Fonts<F, A>;
+  } as Fonts<F, DefaultAliases & A>;
 
   const useFonts = () => expoUseFonts(useFontsArg);
 
