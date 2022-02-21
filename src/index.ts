@@ -8,11 +8,13 @@ import { useFonts as expoUseFonts } from 'expo-font';
 /** Prettify obj type */
 type Id<T> = unknown & { [P in keyof T]: T[P] };
 
-type FontsToLoad = Id<{
-  useFonts?: any;
-  __metadata__?: any;
-  // [x in string]: any
-}>;
+
+type FontsToLoad = Record<string, any>;
+// Id<{
+//   useFonts?: any;
+//   __metadata__?: any;
+//   // [x in string]: any
+// }>; // This wouln't allow single fonts
 
 
 type SystemAliases = Record<string, string>;
@@ -144,6 +146,7 @@ export function createFontsToLoad<
 
 // Test Probe
 // const a = createFontsToLoad({
-//   aliases: {a: '4'}
+//   aliases: {a: '4'},
+//   fontsToLoad: {A: 4}
 // })
 // a.

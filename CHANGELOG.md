@@ -11,6 +11,9 @@
 *
 -->
 
+## 0.1.6 - 2022-02-20
+* Fixed single font type not being able to be added to fontsToBeLoaded
+
 ## 0.1.5 - 2022-02-13
 * Fixed default aliases not showing up on `F`
 * `aliases` now has priority over default aliases.
