@@ -1,6 +1,6 @@
 {
   "name": "expo-font-loader",
-  "version": "0.1.6",
+  "version": "1.0.0",
   "description": "Smartly load and use expo fonts and icons!",
   "main": "./lib/index.js",
   "scripts": {
@@ -19,8 +19,13 @@
   "files": [
     "/lib"
   ],
-  "dependencies": {
-    "expo-font": "*"
+  "bugs": {
+    "url": "https://github.com/SrBrahma/expo-font-loader/issues"
+  },
+  "homepage": "https://github.com/SrBrahma/expo-font-loader#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SrBrahma/expo-font-loader.git"
   },
   "devDependencies": {
     "@types/jest": "^27.4.0",
@@ -32,9 +37,11 @@
     "ts-node-dev": "^1.1.8",
     "typescript": "^4.5.5",
     "react-native": "*",
-    "@types/react-native": "*"
+    "@types/react-native": "*",
+    "expo-font": "*"
   },
   "peerDependencies": {
-    "react-native": "*"
+    "react-native": "*",
+    "expo-font": "*"
   }
 }

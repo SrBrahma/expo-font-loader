@@ -22,10 +22,10 @@ If you remove a font to be loaded and it's being used somewhere, there will be a
 
 ## 💿 Installation
 ```bash
-npm install expo-font-loader
-# or
-yarn add expo-font-loader
+expo install expo-font expo-font-loader
 ```
+
+> To avoid incompabilities of Expo SDK versions, we install expo-font with `expo install`.
 
 ## 📖 Usage
 
@@ -91,4 +91,4 @@ function Component() {
 
 ```
 
-## 📰 [Changelog](CHANGELOG.md)
+## 📰 [Changelog](https://github.com/SrBrahma/expo-font-loader/blob/main/CHANGELOG.md)

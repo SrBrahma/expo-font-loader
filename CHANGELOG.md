@@ -11,6 +11,9 @@
 *
 -->
 
+## 1.0.0 - 2022-05-02
+* `expo-font` is now a peer dependency. You shall install it via `expo install expo-font`. This is due to incompabilities of Expo SDK 44 <-> 45.
+
 ## 0.1.6 - 2022-02-20
 * Fixed single font type not being able to be added to fontsToBeLoaded
 
