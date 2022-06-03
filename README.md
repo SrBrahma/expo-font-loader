@@ -41,7 +41,7 @@ import { Inter_900Black } from '@expo-google-fonts/inter';
 import { createFontsToLoad } from 'expo-font-loader'
 
 // F is an alias to Fonts, as I is an alias to Icons.
-export const { F, Icons, useFonts } = createFontsToLoad({
+export const { F, Icons, useFonts, loadFonts } = createFontsToLoad({
   fontsToLoad: {
     ...Roboto,
     Inter_900Black
@@ -62,6 +62,11 @@ export const { F, Icons, useFonts } = createFontsToLoad({
 import { useFonts } from './fonts.ts'
 
 const App () => {
+  /**
+   * 1.1.0 Update!
+   * You can now use loadFonts instead of useFonts, to be used instead of Font.loadAsync(fonts)
+   * as described in https://docs.expo.dev/versions/latest/sdk/splash-screen.
+   * */
   const [fontsLoaded, error] = useFonts();
 
   if (!fontsLoaded)

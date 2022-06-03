@@ -2,7 +2,7 @@
 // I first shared it in here: https://github.com/expo/google-fonts/issues/6
 // Aditional fontWeights and to be used on iOS
 import { Platform } from 'react-native';
-import { useFonts as expoUseFonts } from 'expo-font';
+import { loadAsync as expoLoadAsync, useFonts as expoUseFonts } from 'expo-font';
 
 
 /** Prettify obj type */
@@ -92,6 +92,11 @@ type FontsToLoadRtn<F extends FontsToLoad, I extends Icons, A extends SystemAlia
    Fonts: Fonts<F, A>;
    /** To be used just like the default useFonts(args), without the args. */
    useFonts: () => [fontsLoaded: boolean, error: Error | null];
+   /** To be used just like Font.loadAsync(args), without the args.
+    *
+    * It's the new way recommended way to use SplashScreen: https://docs.expo.dev/versions/latest/sdk/splash-screen/
+    * */
+   loadFonts: () => Promise<void>;
    /** Short alias to `Icons`.
     *
     * Icons to be used via `<Icons.MaterialCommunityIcons/>`. */
@@ -135,12 +140,15 @@ export function createFontsToLoad<
 
   const useFonts = () => expoUseFonts(useFontsArg);
 
+  const loadFonts = () => expoLoadAsync(useFontsArg);
+
   return {
     F: Fonts,
     Fonts,
-    useFonts,
     I: iconsToLoad,
     Icons: iconsToLoad,
+    useFonts,
+    loadFonts,
   };
 }
 

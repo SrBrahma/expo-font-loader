@@ -11,6 +11,9 @@
 *
 -->
 
+## 1.1.0 - 2022-06-03
+* Added `loadFonts` function, to be used in the new recommended way to use https://docs.expo.dev/versions/latest/sdk/splash-screen/.
+
 ## 1.0.0 - 2022-05-02
 * `expo-font` is now a peer dependency. You shall install it via `expo install expo-font`. This is due to incompabilities of Expo SDK 44 <-> 45.
 
