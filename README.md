@@ -27,6 +27,25 @@ expo install expo-font-loader expo-font
 
 ## 📖 Usage
 
+#### Font and icon usage
+```tsx
+const styles = StyleSheet.create({
+  text: {
+    // Type safe and smart!
+    fontFamily: F.Roboto_500Medium
+  },
+  monoText: {
+    // Aliases are used in the same way!
+    fontFamily: F.monospace
+  }
+});
+
+function Component() {
+  return (<Icons.MaterialCommunityIcons ... />)
+}
+
+```
+
 #### Setup
 ```tsx
 import { Platform } from 'react-native';
@@ -73,25 +92,6 @@ const App () => {
 
   return <Components ... />
 }
-```
-
-#### Font and icon usage
-```tsx
-const styles = StyleSheet.create({
-  text: {
-    // Type safe and smart! And loaded when used!
-    fontFamily: F.Roboto_500Medium
-  },
-  monoText: {
-    // Alias are used in the same way!
-    fontFamily: F.monospace
-  }
-});
-
-function Component() {
-  return (<Icons.MaterialCommunityIcons ... />)
-}
-
 ```
 
 ## 📰 [Changelog](https://github.com/SrBrahma/expo-font-loader/blob/main/CHANGELOG.md)
