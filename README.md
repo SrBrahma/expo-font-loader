@@ -25,8 +25,6 @@ If you remove a font to be loaded and it's being used somewhere, there will be a
 expo install expo-font-loader expo-font
 ```
 
-> To avoid incompabilities of Expo SDK versions, we install expo-font with `expo install`.
-
 ## 📖 Usage
 
 #### Setup
